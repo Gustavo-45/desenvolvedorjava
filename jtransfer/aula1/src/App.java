@@ -1,3 +1,4 @@
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -37,8 +38,15 @@ public class App {
 
         System.out.println("Nome: "+nome+ ", Meio de Transporte: "+ meio);
        
+        try(FileWriter escritor = new FileWriter("dados.txt",true)) {
+            
+            escritor.write(nome+","+meio+ "\n");
+            System.out.println("dados gravados com sucesso");
+
+        } catch(IOException e){
+           System.out.println("Erro ao gravar os dados"+e.getMessage());
+         
+        }
     }
 }
 
-// Task de amanhã: Salvar os dados no arquivo.
-// Task no GitHub (git e github)
