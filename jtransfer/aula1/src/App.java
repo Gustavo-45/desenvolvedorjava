@@ -41,4 +41,4 @@ public class App {
 }
 
 // Task de amanhã: Salvar os dados no arquivo.
-// Task no GitHu (git e github)
+// Task no GitHub (git e github)
